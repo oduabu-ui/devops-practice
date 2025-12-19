@@ -39,3 +39,5 @@ echo "Script completed successfully 🚀"
 echo "System uptime:" | tee -a $LOGFILE
 uptime | tee -a $LOGFILE
 echo "" | tee -a $LOGFILE
+echo "Updated on Day 14 – branching practice" | tee -a day12.log
+
