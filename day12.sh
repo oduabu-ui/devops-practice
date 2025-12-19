@@ -1,10 +1,10 @@
 #!/bin/bash
+
 LOGFILE="day12.log"
 
-echo "==============================" | tee -a $LOGFILE
+echo  | tee -a $LOGFILE
 echo "Day 12 DevOps Script" | tee -a $LOGFILE
-echo "Started at: $(date)" | tee -a $LOGFILE
-echo "==============================" | tee -a $LOGFILE
+echo "Started at: $(date)" | tee -at" | tee -a $LOGFILE
 echo "" | tee -a $LOGFILE
 
 # Ask for user input (SAFE)
@@ -38,7 +38,11 @@ echo "Script completed successfully 🚀"
 # System uptime
 echo "System uptime:" | tee -a $LOGFILE
 uptime | tee -a $LOGFILE
-echo "" | tee -a $LOGFILE
-echo "Updated on Day 14 – branching practice" | tee -a day12.log
+echo "" | tee -a $LOGFILE                           echo
+echo""Updated on Day 14 – branching practice" | tee -a day12.log
 
+<<<<<<< HEAD
 echo "Change from MAIN branch"
+=======
+echo "Change from feature-day15 branch"
+>>>>>>> feature-day15
