@@ -41,9 +41,10 @@ uptime | tee -a $LOGFILE
 echo "" | tee -a $LOGFILE                           echo
 echo""Updated on Day 14 – branching practice" | tee -a day12.log
 
-<<<<<<< HEAD
-echo "Change from MAIN branch"
-=======
-echo "Change from feature-day15 branch"
->>>>>>> feature-day15
+echo "Change from MAIN branch"                  echo "Change from feature-day15 branch"
+echo "Change from MAIN branch"                  echo feature-day15
+
 Change on main for rebase test
+
+echo "Day 16 rebase practice" >> day12.sh
+39de043 (Day 16: rebase practice commit
