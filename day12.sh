@@ -49,3 +49,4 @@ echo "Change from feature-day15 branch"
 Change on main for rebase test
 echo "Day 17: cherry-pick practice" >> day12.sh
 
+echo "Day 19: stash practice" >> day12.sh
