@@ -1,0 +1,42 @@
+name: DevOps Scripts CI with Artifacts
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  run-scripts:
+    runs-on: ubuntu-latest
+
+
+steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Make scripts executable
+        run: chmod +x ./day*.sh
+
+      - name: Run DevOps scripts and collect logs
+        run: |
+          mkdir -p logs
+          for script in ./day*.sh; do
+            if [ -f "$script" ]; then
+              echo "===== Running $script ====="
+              bash "$script" | tee "logs/${script}.log"
+            fi
+          done
+
+
+- name: Upload script logs
+        uses: actions/upload-artifact@v3
+        with:
+          name: devops-script-logs
+          path: logs/
+
+      - name: Upload backup folders
+        uses: actions/upload-artifact@v3
+        with:
+          name: devops-backups
+          path: backup*
